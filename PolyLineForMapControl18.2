@@ -1,0 +1,15 @@
+//#region for ready
+private MapItemStorage InstanceItemStorageGuardVehicle { get { return (MapItemStorage)GetVectorLayersFromMapControl.Data; } }
+//#endregion for ready
+
+//Draw PolyLIne
+var polyLineHuman = new MapPolyline() { StrokeWidth = 2, Stroke = Color.GhostWhite };
+polyLineHuman.Points.AddRange(new GeoPoint[] {
+    new GeoPoint(37.825134, 126.744083),
+    new GeoPoint(37.835134, 126.734083),
+    new GeoPoint(37.845134, 126.684083),
+    new GeoPoint(37.855134, 126.714086)
+});
+InstanceItemStorageGuardVehicle.Items.Add(polyLineHuman);
+
+
